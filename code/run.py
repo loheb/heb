@@ -18,7 +18,7 @@ async def unload(ctx, extension):
     bot.unload_extension(f'cogs.{extension}')
     await ctx.send('Command has been unloaded.')
 
-for filename in os.listdir(path=r'C:\Users\theaw\PycharmProjects\heb-bot\code\cogs'):
+for filename in os.listdir(path='.\code\cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
