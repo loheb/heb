@@ -4,7 +4,7 @@ from discord.ext.commands import has_permissions
 
 bot = commands.Bot(command_prefix='!', case_insensitive=True)
 
-discord_token = ('NzU0MzI1NDY1MDIzNjQzNzU5.X1zGVQ.9YBtexEWN0Yrk-CjJN0nPyPsbsY')
+discord_token = process.env(TOKEN)
 
 @bot.command()
 @has_permissions(administrator=True)
@@ -22,4 +22,4 @@ for filename in os.listdir(path='.\code\cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
-bot.run(discord_token)
+bot.run(process.env(TOKEN))
