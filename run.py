@@ -19,5 +19,5 @@ async def unload(ctx, extension):
 for filename in os.listdir(path='.\code\cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
-
-bot.run(process.env((TOKEN))  
+               
+bot.run(process.env(TOKEN))  
